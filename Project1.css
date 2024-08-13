@@ -1,0 +1,207 @@
+body, h1, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+	background-color: #F0F0F0;
+
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: black;
+    position: relative;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+	border-radius: 100%;
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-size: 1.4rem;
+	font-weight:600;
+}
+
+.customer {
+	position:relative;
+	width : 190px;
+	font-weight:200;
+	height : 10px;
+	font-size: 12px;
+
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.search-container {
+	position: relative;
+    display: inline-block;
+    width: 320px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-container input {
+    width: 100%;
+    max-width: 320px;
+    padding: 10px;
+    border-radius: 20px;
+	padding-right: 40px;
+    border: solid 1px;
+    outline: none;
+	font-size: 16px;
+}
+
+.search-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-menu a {
+    color: black;
+	font-weight:500;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+}
+.dropdown-btn{
+	height:10px;
+	width:10px;
+}
+
+.dropbtn {
+    background-color: #F0F0F0;
+    color: black;
+	font-weight:500;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size:12px;
+    transition: background-color 0.3s ease;
+}
+
+.dropbtn:hover {
+    background-color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #F0F0F0;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction:column;
+        align-items: flex-start;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        z-index: 1;
+    }
+
+    .navbar-menu a {
+        padding: 10px 0;
+        text-align: center;
+        width: 100%;
+        border-top: 1px solid #444;
+		color : black;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-open .navbar-menu {
+        display: flex; 
+    }
+
+    .dropdown-content {
+        position: static; 
+    }
+}
+
+@media (max-width:  828px){
+	.d-flex{
+	display: flex;
+    justify-content: space-between;
+    width: 100%;
+	}
+}
+
+
+}	
